@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'Gallery | F-Stop Camera Club';
+const pageDescription =
+  'Browse selected photography from F-Stop Camera Club members in Chatteris.';
+
+const galleryItems = [
+  { file: 'gallery-01.jpg', alt: 'Placeholder: morning mist over fields' },
+  { file: 'gallery-02.jpg', alt: 'Placeholder: black and white street portrait' },
+  { file: 'gallery-03.jpg', alt: 'Placeholder: macro flower detail' },
+  { file: 'gallery-04.jpg', alt: 'Placeholder: river reflection at sunset' },
+  { file: 'gallery-05.jpg', alt: 'Placeholder: architectural lines in town centre' },
+  { file: 'gallery-06.jpg', alt: 'Placeholder: local wildlife on a branch' }
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="section">
+    <div class="container">
+      <h1>Gallery</h1>
+      <p>
+        A selection of club photography. Replace placeholder filenames with final web-ready images.
+      </p>
+      <div class="gallery-grid" role="list">
+        {
+          galleryItems.map((item) => (
+            <figure role="listitem" class="gallery-card">
+              <img src={`/images/${item.file}`} alt={item.alt} loading="lazy" />
+              <figcaption>{item.file}</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+      <!-- TODO: Replace each placeholder alt text with meaningful descriptions of real photos. -->
+    </div>
+  </section>
+</BaseLayout>

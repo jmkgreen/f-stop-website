@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'F-Stop Camera Club | Chatteris Photography Community';
+const pageDescription =
+  'A welcoming photography club in Chatteris, Cambridgeshire with monthly meetings, themed shoots, and shared learning.';
+
+const nextMeeting = {
+  date: 'Thursday 18 April 2026',
+  time: '7:30 PM',
+  location: 'Chatteris Community Hall'
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="hero" aria-labelledby="home-title">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">Local Community Photography Club</p>
+        <h1 id="home-title">F-Stop Camera Club</h1>
+        <p>
+          We are a friendly group of photographers based in Chatteris, Cambridgeshire.
+          Members of all experience levels come together monthly to learn, share work,
+          and enjoy photography.
+        </p>
+        <!-- TODO: Replace this short introduction with approved club wording. -->
+        <a class="button" href="/contact/">Join the Club</a>
+      </div>
+      <figure class="hero-image">
+        <img
+          src="/images/hero-chatteris-sunrise.jpg"
+          alt="Placeholder: sunrise over Cambridgeshire landscape"
+          loading="eager"
+        />
+        <figcaption>Image placeholder for the homepage hero photograph.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container next-meeting" aria-labelledby="next-meeting-heading">
+      <h2 id="next-meeting-heading">Next Meeting</h2>
+      <p>
+        <strong>{nextMeeting.date}</strong><br />
+        {nextMeeting.time} at {nextMeeting.location}
+      </p>
+      <p>
+        Theme: Street details and texture.
+        <!-- TODO: Update next meeting details monthly. -->
+      </p>
+      <a class="text-link" href="/meetings/">See all meeting information</a>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="home-gallery-preview">
+    <div class="container">
+      <h2 id="home-gallery-preview">Recent Club Images</h2>
+      <div class="gallery-grid">
+        <img src="/images/gallery-01.jpg" alt="Placeholder: club gallery image one" loading="lazy" />
+        <img src="/images/gallery-02.jpg" alt="Placeholder: club gallery image two" loading="lazy" />
+        <img src="/images/gallery-03.jpg" alt="Placeholder: club gallery image three" loading="lazy" />
+      </div>
+      <!-- TODO: Replace placeholder files and alt text with real member photos and meaningful descriptions. -->
+    </div>
+  </section>
+</BaseLayout>

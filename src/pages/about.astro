@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = 'About | F-Stop Camera Club';
+const pageDescription =
+  'Learn about F-Stop Camera Club, a friendly monthly photography group in Chatteris, Cambridgeshire.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="section">
+    <div class="container prose">
+      <h1>About the Club</h1>
+      <p>
+        F-Stop Camera Club is a local community group for people who enjoy photography,
+        from complete beginners to experienced hobbyists.
+      </p>
+      <p>
+        We meet monthly in Chatteris, Cambridgeshire to share images, learn practical
+        techniques, and support one another in developing creative confidence.
+      </p>
+      <h2>What We Do</h2>
+      <ul>
+        <li>Monthly themed meetings</li>
+        <li>Image sharing and constructive feedback</li>
+        <li>Occasional local photo walks</li>
+        <li>Support with camera and editing basics</li>
+      </ul>
+      <p>
+        <!-- TODO: Add a short paragraph on club history, committee, and membership fees if relevant. -->
+      </p>
+    </div>
+  </section>
+</BaseLayout>
