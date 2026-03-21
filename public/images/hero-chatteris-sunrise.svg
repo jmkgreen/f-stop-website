@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder hero image</title>
+  <desc id="desc">Stylized sunrise landscape placeholder for the website hero image.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16324a" />
+      <stop offset="58%" stop-color="#d88d57" />
+      <stop offset="100%" stop-color="#f2d6a2" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#sky)" />
+  <circle cx="1120" cy="300" r="108" fill="#fff1b8" opacity="0.85" />
+  <path d="M0 760C160 680 280 650 420 660C590 673 700 770 875 768C1038 767 1174 674 1315 664C1432 655 1528 689 1600 720V1200H0Z" fill="#617c6b" />
+  <path d="M0 860C149 821 328 782 514 799C692 815 811 899 996 907C1198 916 1370 836 1600 775V1200H0Z" fill="#2d4a45" />
+  <text x="96" y="1068" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">F-Stop Camera Club</text>
+  <text x="96" y="1138" fill="#f6efe3" font-family="Arial, Helvetica, sans-serif" font-size="34">Replace with a real hero photograph</text>
+</svg>

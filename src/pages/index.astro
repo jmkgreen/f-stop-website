@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = 'F-Stop Camera Club | Chatteris Photography Community';
 const pageDescription =
   'A welcoming photography club in Chatteris, Cambridgeshire with monthly meetings, themed shoots, and shared learning.';
+const baseUrl = import.meta.env.BASE_URL;
 
 const nextMeeting = {
   date: 'Thursday 18 April 2026',
@@ -24,11 +25,11 @@ const nextMeeting = {
           and enjoy photography.
         </p>
         <!-- TODO: Replace this short introduction with approved club wording. -->
-        <a class="button" href="/contact/">Join the Club</a>
+        <a class="button" href={`${baseUrl}contact/`}>Join the Club</a>
       </div>
       <figure class="hero-image">
         <img
-          src="/images/hero-chatteris-sunrise.jpg"
+          src={`${baseUrl}images/hero-chatteris-sunrise.svg`}
           alt="Placeholder: sunrise over Cambridgeshire landscape"
           loading="eager"
         />
@@ -48,7 +49,7 @@ const nextMeeting = {
         Theme: Street details and texture.
         <!-- TODO: Update next meeting details monthly. -->
       </p>
-      <a class="text-link" href="/meetings/">See all meeting information</a>
+      <a class="text-link" href={`${baseUrl}meetings/`}>See all meeting information</a>
     </div>
   </section>
 
@@ -56,9 +57,9 @@ const nextMeeting = {
     <div class="container">
       <h2 id="home-gallery-preview">Recent Club Images</h2>
       <div class="gallery-grid">
-        <img src="/images/gallery-01.jpg" alt="Placeholder: club gallery image one" loading="lazy" />
-        <img src="/images/gallery-02.jpg" alt="Placeholder: club gallery image two" loading="lazy" />
-        <img src="/images/gallery-03.jpg" alt="Placeholder: club gallery image three" loading="lazy" />
+        <img src={`${baseUrl}images/gallery-01.svg`} alt="Placeholder: club gallery image one" loading="lazy" />
+        <img src={`${baseUrl}images/gallery-02.svg`} alt="Placeholder: club gallery image two" loading="lazy" />
+        <img src={`${baseUrl}images/gallery-03.svg`} alt="Placeholder: club gallery image three" loading="lazy" />
       </div>
       <!-- TODO: Replace placeholder files and alt text with real member photos and meaningful descriptions. -->
     </div>

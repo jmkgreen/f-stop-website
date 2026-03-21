@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#ece7df" />
+  <path d="M240 0H390V900H240Z" fill="#4e5a62" />
+  <path d="M480 0H600V900H480Z" fill="#89949b" />
+  <path d="M720 0H840V900H720Z" fill="#5d6871" />
+  <path d="M960 0H1080V900H960Z" fill="#aab2b8" />
+  <path d="M0 690H1200" stroke="#d29a57" stroke-width="26" />
+  <text x="70" y="820" fill="#283036" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">Gallery Placeholder 05</text>
+</svg>

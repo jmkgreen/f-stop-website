@@ -98,6 +98,13 @@ Choose one hosting path.
 - Deployment is automated via `.github/workflows/deploy-pages.yml`.
 - Push/merge to `main` to deploy.
 
+For a custom domain:
+
+1. Add the domain in GitHub Pages settings.
+2. Point DNS at GitHub Pages in Cloudflare.
+3. Add repository variable `SITE_URL` with the full URL.
+4. Only set `BASE_PATH` if the site should live below a sub-path.
+
 ### B) Cloudflare Pages
 
 One-time project settings:
@@ -107,6 +114,12 @@ One-time project settings:
 - Node version: `24`
 
 After setup, each push to the configured branch triggers a deployment.
+
+For a custom domain:
+
+1. Add the domain in the Cloudflare Pages project.
+2. Set `SITE_URL` to the full public URL.
+3. Leave `BASE_PATH` empty for normal root-domain hosting.
 
 ## 7. Quick checklist before merge
 

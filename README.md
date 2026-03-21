@@ -78,6 +78,15 @@ One-time setup:
 2. Set **Source** to **GitHub Actions**.
 3. Push to `main` and confirm workflow success in **Actions**.
 
+For a custom domain on GitHub Pages:
+
+1. Add the custom domain in GitHub Pages settings.
+2. Create DNS records for that domain in Cloudflare.
+3. Set repository variable `SITE_URL` to the full site URL, for example `https://www.example.com`.
+4. If you need a non-root path, optionally set repository variable `BASE_PATH`.
+
+If `SITE_URL` is set, the Astro config uses `/` as the default base path unless `BASE_PATH` is also provided.
+
 ### Cloudflare Pages
 
 Cloudflare Pages is also supported and is a good fit for this project.
@@ -93,6 +102,13 @@ One-time setup:
 4. Save and deploy.
 
 After setup, every push to the configured branch triggers a deployment.
+
+For a custom domain on Cloudflare Pages:
+
+1. Open the Pages project in Cloudflare.
+2. Add your domain under **Custom domains**.
+3. Set `SITE_URL` in Cloudflare Pages environment variables to the full site URL.
+4. Leave `BASE_PATH` unset unless you are deliberately hosting below a sub-path.
 
 ## Image handling strategy
 
@@ -112,3 +128,4 @@ For the full process (including Cloudflare R2 guidance), see:
 - Keep filenames lowercase and hyphenated.
 - Update meaningful `alt` text whenever images change.
 - Avoid committing camera originals or very large source image archives.
+- Placeholder images are bundled in `public/images/` so the site renders correctly before real photography is added.
