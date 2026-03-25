@@ -108,7 +108,7 @@ The initial site will likely include:
 - About
 - Meetings
 - Gallery
-- Contact or Join
+- Contact
 
 These pages should be implemented in a way that keeps future edits simple.
 
