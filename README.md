@@ -2,7 +2,7 @@
 
 A lightweight static website for **F-Stop Camera Club**, a local photography group based in **Chatteris, Cambridgeshire**.
 
-This project uses **Astro** to keep the site fast, simple, and easy to maintain. It is suitable for static hosting on **GitHub Pages** and **Cloudflare Pages**.
+This project uses **Astro** to keep the site fast, simple, and easy to maintain. It is configured for static hosting on **Cloudflare Pages**.
 
 ## Project goals
 
@@ -18,8 +18,7 @@ The site is intended to be:
 
 - [Astro](https://astro.build/) for the static site
 - HTML and CSS for structure and styling
-- GitHub Actions for CI/CD
-- GitHub Pages or Cloudflare Pages for hosting
+- Cloudflare Pages for hosting and deployments
 
 ## Getting started
 
@@ -68,28 +67,9 @@ If you are making a quick urgent update and working directly on the default flow
 
 ## Deploying
 
-### GitHub Pages
-
-This repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml` that deploys on push to `main`.
-
-One-time setup:
-
-1. In GitHub repository settings, go to **Pages**.
-2. Set **Source** to **GitHub Actions**.
-3. Push to `main` and confirm workflow success in **Actions**.
-
-For a custom domain on GitHub Pages:
-
-1. Add the custom domain in GitHub Pages settings.
-2. Create DNS records for that domain in Cloudflare.
-3. Set repository variable `SITE_URL` to the full site URL, for example `https://www.example.com`.
-4. If you need a non-root path, optionally set repository variable `BASE_PATH`.
-
-If `SITE_URL` is set, the Astro config uses `/` as the default base path unless `BASE_PATH` is also provided.
-
 ### Cloudflare Pages
 
-Cloudflare Pages is also supported and is a good fit for this project.
+Cloudflare Pages is the production hosting platform for this project.
 
 One-time setup:
 
@@ -99,16 +79,20 @@ One-time setup:
 	- Build command: `npm run build`
 	- Build output directory: `dist`
 	- Node version: `24`
-4. Save and deploy.
+4. Set the production branch to `main`.
+5. Save and deploy.
 
-After setup, every push to the configured branch triggers a deployment.
+After setup, every push to `main` triggers a production deployment. Pull requests and other branches can continue to use Cloudflare preview deployments (for example `*.workers.dev`).
 
 For a custom domain on Cloudflare Pages:
 
 1. Open the Pages project in Cloudflare.
-2. Add your domain under **Custom domains**.
-3. Set `SITE_URL` in Cloudflare Pages environment variables to the full site URL.
-4. Leave `BASE_PATH` unset unless you are deliberately hosting below a sub-path.
+2. Go to **Custom domains** and add `fstopcameraclub.com`.
+3. If you also want `www.fstopcameraclub.com`, add it as a second custom domain and set one host to redirect to the other.
+4. Because the domain is already in the same Cloudflare account, Cloudflare can create the required DNS records and TLS configuration automatically.
+5. Leave `BASE_PATH` unset unless you are deliberately hosting below a sub-path.
+
+This repository now defaults Astro's canonical site URL to `https://fstopcameraclub.com`. You only need to set `SITE_URL` in Cloudflare Pages if you want to override that default for another environment.
 
 ## Image handling strategy
 
