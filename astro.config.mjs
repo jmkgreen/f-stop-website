@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 
+const productionSite = 'https://fstopcameraclub.com';
 const repository = process.env.GITHUB_REPOSITORY;
 const owner = process.env.GITHUB_REPOSITORY_OWNER;
 const repoName = repository?.split('/')[1];
@@ -24,6 +25,6 @@ const inferredBase = isGitHubActions && repoName ? `/${repoName}/` : '/';
 
 export default defineConfig({
   output: 'static',
-  site: explicitSite || inferredSite,
+  site: explicitSite || productionSite || inferredSite,
   base: explicitBase ? normalizeBase(explicitBase) : explicitSite ? '/' : inferredBase
 });
