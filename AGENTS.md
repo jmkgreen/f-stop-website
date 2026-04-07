@@ -102,6 +102,20 @@ Avoid:
 - Avoid heavy styling frameworks unless explicitly requested
 - Maintain a polished but understated visual design
 
+## Club community
+
+The club maintains two private Facebook groups that the website must reference:
+
+- **Non-members community group** — open to anyone in the local area who wishes to follow along or ask to join:
+  https://www.facebook.com/groups/135539084457507
+- **Members-only group** — accessible only to fee-paying members, who are added by club organisers:
+  https://www.facebook.com/groups/718663239671283
+
+The website must make clear that:
+- Full club membership requires an annual fee (currently £30 for 2026)
+- Membership includes access to the private members-only Facebook group
+- The non-members group is a low-commitment way for local people to connect with the club
+
 ## Suggested site sections
 The initial site will likely include:
 - Home
