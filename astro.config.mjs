@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 
+import cloudflare from "@astrojs/cloudflare";
+
 const productionSite = 'https://fstopcameraclub.com';
 const repository = process.env.GITHUB_REPOSITORY;
 const owner = process.env.GITHUB_REPOSITORY_OWNER;
@@ -26,5 +28,6 @@ const inferredBase = isGitHubActions && repoName ? `/${repoName}/` : '/';
 export default defineConfig({
   output: 'static',
   site: explicitSite || productionSite || inferredSite,
-  base: explicitBase ? normalizeBase(explicitBase) : explicitSite ? '/' : inferredBase
+  base: explicitBase ? normalizeBase(explicitBase) : explicitSite ? '/' : inferredBase,
+  adapter: cloudflare()
 });
